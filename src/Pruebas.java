@@ -1,7 +1,6 @@
 public class Pruebas {
 
     public static void main(String[] args) {
-        //TODO Completar el main
         Evaluacion ev1 = new Evaluacion("ED","Junio 19", 4.5);
         Evaluacion ev2 = new Evaluacion("ED", "Julio 19", -1);
         Evaluacion ev3 = new Evaluacion("ED","Julio 20", 7.4);
@@ -61,7 +60,6 @@ public class Pruebas {
         eduardo.mostrar();
         sonia.mostrar();
 
-        // TODO empezar con la lista calificada
         //4.1
         Alumno pedro = new Alumno("Pedro Jiménez del Pozo", 8510);
         Evaluacion ev5 = new Evaluacion("Fundamentos de Programación","Enero 19", 8.8);
@@ -76,14 +74,16 @@ public class Pruebas {
             itc.next().mostrar();
         }
 
-        //4.2.3 //TODO hacer todas las pruebas de 4.2.3
+        //4.2.3
         System.out.println("---------- Borramos las claves menores a 6000------------");
         listaCalificadaAlumnos.borrarMenores(6000);
+        itc = listaCalificadaAlumnos.getIterador();
         while(itc.hasNext()) {
             itc.next().mostrar();
         }
         System.out.println("---------- Borramos las claves menores a 9000------------");
         listaCalificadaAlumnos.borrarMenores(9000);
+        itc = listaCalificadaAlumnos.getIterador();
         while(itc.hasNext()) {
             itc.next().mostrar();
         }
@@ -92,13 +92,15 @@ public class Pruebas {
         listaCalificadaAlumnos.insertar(felipe);
         listaCalificadaAlumnos.insertar(alicia);
         listaCalificadaAlumnos.borrarMayores(7000);
+        itc = listaCalificadaAlumnos.getIterador();
         while(itc.hasNext()) {
-            it.next().mostrar();
+            itc.next().mostrar();
         }
         System.out.println("------------ Borramos las claves mayores a 1000 -----------");
         listaCalificadaAlumnos.borrarMayores(1000);
-        while(it.hasNext()) {
-            it.next().mostrar();
+        itc = listaCalificadaAlumnos.getIterador();
+        while(itc.hasNext()) {
+            itc.next().mostrar();
         }
 
         //5.5

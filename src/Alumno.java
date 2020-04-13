@@ -48,7 +48,7 @@ public class Alumno {
         Iterador it = expediente.getIterador();
         while(it.hasNext()) {
             Evaluacion evaluacion = it.next();
-            if(evaluacion.getNota() >= 5) {  //TODO implementar usando el metodo de arriba  aunq (evaluacion.getNota() >= 5) como cond esta bien
+            if(evaluacion.getNota() >= 5) {
                 aprobadas.insertar(evaluacion);
             }
         }

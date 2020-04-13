@@ -94,7 +94,6 @@ public class ListaCalificada {
     }
 
     public void borrarMenores(int clave) {
-        //TODO implementar este método
         NodoC actual = inicio;
         while(actual != null && actual.getClave() < clave) {
             actual = actual.getSiguiente();
@@ -108,7 +107,17 @@ public class ListaCalificada {
     }
 
     public void borrarMayores(int clave) {
-        //TODO implementar este método
+        NodoC anterior = null;
+        NodoC actual = this.inicio;
+        while(actual != null && actual.getClave() < clave) {
+            anterior = actual;
+            actual = actual.getSiguiente();
+        }
+        if(actual == inicio && anterior == null) {
+            inicio = null;
+        }else if(actual != null) {
+            anterior.setSiguiente(null);
+        }
     }
 
 }

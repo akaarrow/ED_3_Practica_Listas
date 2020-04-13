@@ -51,7 +51,7 @@ public class AlumnoBib {
         Iterator<Evaluacion> it = expediente.iterator();
         while(it.hasNext()) {
             Evaluacion evaluacion = it.next();
-            if(evaluacion.getNota() >= 5) {  //TODO implementar usando el metodo de arriba //(evaluacion.getNota() >= 5) esta bien
+            if(evaluacion.getNota() >= 5) {
                 aprobadas.add(evaluacion);
             }
         }
