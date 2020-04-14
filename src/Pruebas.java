@@ -1,12 +1,12 @@
 public class Pruebas {
 
     public static void main(String[] args) {
+        //2.2 declaramos 4 Evaluacion y los insertamos en una ListaOrdinal y la mostramos
         Evaluacion ev1 = new Evaluacion("ED","Junio 19", 4.5);
         Evaluacion ev2 = new Evaluacion("ED", "Julio 19", -1);
         Evaluacion ev3 = new Evaluacion("ED","Julio 20", 7.4);
         Evaluacion ev4 = new Evaluacion("Algebra","Junio 18", 6.4);
 
-        //2.2   declaramos una lista de Evaluaciones e insertamos 4
         ListaOrdinal listaOrdinalEvaluaciones = new ListaOrdinal();
         listaOrdinalEvaluaciones.insertar(ev1);
         listaOrdinalEvaluaciones.insertar(ev2);
@@ -19,13 +19,13 @@ public class Pruebas {
             it.next().mostrar();
         }
 
-        //2.3
+        //2.3 Mostramos el numero de convocatorias de diferentes asignaturas en la lista ordinal
         System.out.println("-------------------------------");
         System.out.println("Numero de convocatorias de ED: " + listaOrdinalEvaluaciones.numConvocatorias("ED"));
         System.out.println("Numero de convocatorias de Algebra: " + listaOrdinalEvaluaciones.numConvocatorias("Algebra"));
         System.out.println("Numero de convocatorias de Fundamentos de Programacion: " + listaOrdinalEvaluaciones.numConvocatorias("Fundamentos de Programacion"));
 
-        //3.5
+        //3.5 mostramos las asignaturas aprobadas por los alumnos y luego mostramos estos
         Alumno felipe = new Alumno("Felipe García Gómez", 1253);
         Alumno alicia = new Alumno("Alicia Blázquez Martín", 5622);
         felipe.nuevaEvaluacion(ev1);
@@ -49,7 +49,7 @@ public class Pruebas {
         felipe.mostrar();
         alicia.mostrar();
 
-        //3.6
+        //3.6 mostramos los alumnosBib
         AlumnoBib eduardo = new AlumnoBib("Eduardo Parra Martín", 8765);
         AlumnoBib sonia = new AlumnoBib("Sonia Torres Pardo", 2345);
         eduardo.nuevaEvaluacion(ev1);
@@ -60,7 +60,7 @@ public class Pruebas {
         eduardo.mostrar();
         sonia.mostrar();
 
-        //4.1
+        //4.1 Creamos una lista calificada de alumnos, le añadimos los que teniamos mas uno nuevo y la mostramos
         Alumno pedro = new Alumno("Pedro Jiménez del Pozo", 8510);
         Evaluacion ev5 = new Evaluacion("Fundamentos de Programación","Enero 19", 8.8);
         pedro.nuevaEvaluacion(ev5);
@@ -74,7 +74,7 @@ public class Pruebas {
             itc.next().mostrar();
         }
 
-        //4.2.3
+        //4.2.3 prueba de los metodos borrarMenores y borraMayores de la listaCalificada
         System.out.println("---------- Borramos las claves menores a 6000------------");
         listaCalificadaAlumnos.borrarMenores(6000);
         itc = listaCalificadaAlumnos.getIterador();
@@ -103,7 +103,8 @@ public class Pruebas {
             itc.next().mostrar();
         }
 
-        //5.5
+        /* 5.5 creamos un grupo de alumnos, en insertamos los alumnos que teniamos,
+         mostramos cierto alumno, buscandolo por su "clave", y mostramos el % de aprobados en cierta asignatura*/
         GrupoAlumnos grupoAlumnos = new GrupoAlumnos("GX11");
         grupoAlumnos.nuevoAlumno(felipe);
         grupoAlumnos.nuevoAlumno(alicia);
